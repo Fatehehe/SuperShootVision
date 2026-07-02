@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		ABA7B2A02FF62C4F008217F0 /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = ABA7B29F2FF62C4F008217F0 /* RealityKitContent */; };
+		ABA7B2C22FF6332E008217F0 /* ILSDesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = ABA7B2C12FF6332E008217F0 /* ILSDesignSystem */; };
+		ABA7B2C52FF6334E008217F0 /* ILSEngine in Frameworks */ = {isa = PBXBuildFile; productRef = ABA7B2C42FF6334E008217F0 /* ILSEngine */; };
+		ABA7B2C82FF63359008217F0 /* ILSFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = ABA7B2C72FF63359008217F0 /* ILSFoundation */; };
+		ABA7B2CB2FF6336D008217F0 /* ILSHandTracking in Frameworks */ = {isa = PBXBuildFile; productRef = ABA7B2CA2FF6336D008217F0 /* ILSHandTracking */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +45,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABA7B2C82FF63359008217F0 /* ILSFoundation in Frameworks */,
+				ABA7B2C22FF6332E008217F0 /* ILSDesignSystem in Frameworks */,
+				ABA7B2CB2FF6336D008217F0 /* ILSHandTracking in Frameworks */,
+				ABA7B2C52FF6334E008217F0 /* ILSEngine in Frameworks */,
 				ABA7B2A02FF62C4F008217F0 /* RealityKitContent in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -94,6 +102,10 @@
 			name = SuperShootVision;
 			packageProductDependencies = (
 				ABA7B29F2FF62C4F008217F0 /* RealityKitContent */,
+				ABA7B2C12FF6332E008217F0 /* ILSDesignSystem */,
+				ABA7B2C42FF6334E008217F0 /* ILSEngine */,
+				ABA7B2C72FF63359008217F0 /* ILSFoundation */,
+				ABA7B2CA2FF6336D008217F0 /* ILSHandTracking */,
 			);
 			productName = SuperShootVision;
 			productReference = ABA7B29A2FF62C4F008217F0 /* SuperShootVision.app */;
@@ -123,6 +135,12 @@
 			);
 			mainGroup = ABA7B2912FF62C4F008217F0;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				ABA7B2C02FF6332E008217F0 /* XCLocalSwiftPackageReference "sharedpackages/Components/ILSDesignSystem" */,
+				ABA7B2C32FF6334E008217F0 /* XCLocalSwiftPackageReference "sharedpackages/Core/ILSEngine" */,
+				ABA7B2C62FF63359008217F0 /* XCLocalSwiftPackageReference "sharedpackages/Core/ILSFoundation" */,
+				ABA7B2C92FF6336D008217F0 /* XCLocalSwiftPackageReference "sharedpackages/Features/ILSHandTracking" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = ABA7B29B2FF62C4F008217F0 /* Products */;
 			projectDirPath = "";
@@ -165,6 +183,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
+				INFOPLIST_KEY_NSHandsTrackingUsageDescription = "coba hand";
+				INFOPLIST_KEY_NSWorldSensingUsageDescription = "coba world";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -194,6 +214,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
+				INFOPLIST_KEY_NSHandsTrackingUsageDescription = "coba hand";
+				INFOPLIST_KEY_NSWorldSensingUsageDescription = "coba world";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -356,10 +378,45 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCLocalSwiftPackageReference section */
+		ABA7B2C02FF6332E008217F0 /* XCLocalSwiftPackageReference "sharedpackages/Components/ILSDesignSystem" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = sharedpackages/Components/ILSDesignSystem;
+		};
+		ABA7B2C32FF6334E008217F0 /* XCLocalSwiftPackageReference "sharedpackages/Core/ILSEngine" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = sharedpackages/Core/ILSEngine;
+		};
+		ABA7B2C62FF63359008217F0 /* XCLocalSwiftPackageReference "sharedpackages/Core/ILSFoundation" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = sharedpackages/Core/ILSFoundation;
+		};
+		ABA7B2C92FF6336D008217F0 /* XCLocalSwiftPackageReference "sharedpackages/Features/ILSHandTracking" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = sharedpackages/Features/ILSHandTracking;
+		};
+/* End XCLocalSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
 		ABA7B29F2FF62C4F008217F0 /* RealityKitContent */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = RealityKitContent;
+		};
+		ABA7B2C12FF6332E008217F0 /* ILSDesignSystem */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ILSDesignSystem;
+		};
+		ABA7B2C42FF6334E008217F0 /* ILSEngine */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ILSEngine;
+		};
+		ABA7B2C72FF63359008217F0 /* ILSFoundation */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ILSFoundation;
+		};
+		ABA7B2CA2FF6336D008217F0 /* ILSHandTracking */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ILSHandTracking;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

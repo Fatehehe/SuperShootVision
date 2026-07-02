@@ -1,0 +1,3 @@
+[submodule "sharedpackages"]
+	path = sharedpackages
+	url = https://github.com/ILSpatialTeam/ILSpatialSharedPackages.git
