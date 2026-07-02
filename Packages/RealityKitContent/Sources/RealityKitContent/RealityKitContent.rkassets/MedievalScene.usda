@@ -1,0 +1,126 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "Reality Composer Pro Version 2.0 (494.100.6)"
+    }
+    defaultPrim = "Root"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Xform "Root"
+{
+    def "BlueHouses" (
+        active = true
+        prepend references = @TechArt/Mesh/BlueHouses.usdc@
+    )
+    {
+        quatf xformOp:orient = (4.3297803e-17, 4.3297803e-17, 0.70710677, 0.70710677)
+        float3 xformOp:scale = (1, 1, 1)
+        float3 xformOp:translate = (0, 0, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "_materials"
+        {
+            over "MAIN" (
+                references = @MedievalScene.usda@</Root/OrangeHouses/_materials/MAIN>
+            )
+            {
+            }
+
+            over "ROOFM" (
+                references = @MedievalScene.usda@</Root/OrangeHouses/_materials/ROOFM>
+            )
+            {
+            }
+        }
+    }
+
+    def "OrangeHouses" (
+        active = true
+        prepend references = @TechArt/Mesh/OrangeHouses.usdc@
+    )
+    {
+        quatf xformOp:orient = (4.3297803e-17, 4.3297803e-17, 0.70710677, 0.70710677)
+        float3 xformOp:scale = (1, 1, 1)
+        float3 xformOp:translate = (0, 0, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def "Floor2" (
+        active = true
+        prepend references = @TechArt/Mesh/Floor2.usdc@
+    )
+    {
+        quatf xformOp:orient = (4.3297803e-17, 4.3297803e-17, 0.70710677, 0.70710677)
+        float3 xformOp:scale = (1, 1, 1)
+        float3 xformOp:translate = (0, 0, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def "Tower" (
+        active = true
+        prepend references = @TechArt/Mesh/Tower.usdc@
+    )
+    {
+        quatf xformOp:orient = (4.3297803e-17, 4.3297803e-17, 0.70710677, 0.70710677)
+        float3 xformOp:scale = (1, 1, 1)
+        float3 xformOp:translate = (0, 0, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "_materials"
+        {
+            over "MAIN" (
+                references = @MedievalScene.usda@</Root/OrangeHouses/_materials/MAIN>
+            )
+            {
+            }
+
+            over "ROOFM" (
+                references = @MedievalScene.usda@</Root/OrangeHouses/_materials/ROOFM>
+            )
+            {
+            }
+        }
+    }
+
+    def "watchtower" (
+        active = true
+        customData = {
+            float3 rotationEulerHint = (-1.5707961, -0.95189035, -1.5411159e-7)
+        }
+        prepend references = @TechArt/Mesh/watchtower.usdc@
+    )
+    {
+        quatf xformOp:orient = (0.62851894, -0.6285189, -0.32398126, -0.32398129)
+        float3 xformOp:scale = (1.5, 1.5, 1.5)
+        float3 xformOp:translate = (-8.580942, 5.066395e-7, 9.745522)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def "PropsAdd" (
+        active = true
+        prepend references = @TechArt/Mesh/PropsAdd.usdc@
+    )
+    {
+        quatf xformOp:orient = (4.3297803e-17, 4.3297803e-17, 0.70710677, 0.70710677)
+        float3 xformOp:scale = (1, 1, 1)
+        float3 xformOp:translate = (0, 0, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def "BlackHole" (
+        active = true
+        customData = {
+            float3 rotationEulerHint = (0, 1.5707963, 0)
+        }
+        prepend references = @TechArt/ParticlesEmitter/BlackHole.usda@
+    )
+    {
+        quatf xformOp:orient = (0.70710677, 0, 0.70710677, 0)
+        float3 xformOp:scale = (1, 1, 1)
+        float3 xformOp:translate = (-27.045649, 0, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+}
+
