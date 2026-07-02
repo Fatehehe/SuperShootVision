@@ -17,6 +17,10 @@ struct ImmersiveView: View {
         RealityView { content, attachments in
             SystemRegistry.registerAllSystems()
             
+            if let medievalWorld = await MedievalSceneSpawner.spawnMedievalWorld(named: "MedievalScene"){
+                content.add(medievalWorld)
+            }
+            
             let hands = await GloveSpawner.spawnHandGlovesAsync()
 
             for hand in hands {

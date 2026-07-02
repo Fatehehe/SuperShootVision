@@ -8,17 +8,34 @@
 import SwiftUI
 
 struct LoadingView: View {
+    @State private var isPulsing = false
+    
     var body: some View {
-        VStack(spacing: 30) {
-            ProgressView()
-                .controlSize(.extraLarge)
+        VStack(spacing: 35) {
+            Image(systemName: "shield.lefthalf.filled.trianglebadge.exclamationmark")
+                .font(.system(size: 80))
+                .foregroundStyle(.cyan, .blue)
+                .symbolEffect(.pulse, options: .repeating, isActive: isPulsing)
             
-            Text("Tunggu dulu yaw...")
-                .font(.title2)
-                .bold()
-                .foregroundColor(.secondary)
+            VStack(spacing: 12) {
+                Text("Memasuki Medan Pertempuran...")
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .foregroundStyle(.primary)
+                
+                Text("Menyiapkan panah dan busur...")
+                    .font(.title3)
+                    .foregroundStyle(.secondary)
+            }
+            
+            ProgressView()
+                .controlSize(.large)
+                .tint(.cyan)
         }
-        .padding(50)
-        .frame(width: 400, height: 300)
+        .padding(60)
+        .frame(width: 500, height: 400)
+        .onAppear {
+            isPulsing = true
+        }
     }
 }
