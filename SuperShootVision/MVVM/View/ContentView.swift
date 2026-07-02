@@ -10,17 +10,24 @@ import RealityKit
 import RealityKitContent
 
 struct ContentView: View {
-
+    @Environment(AppModel.self) var appModel
     var body: some View {
-        VStack {
-            Model3D(named: "Scene", bundle: realityKitContentBundle)
-                .padding(.bottom, 50)
-
-            Text("Hello, world!")
-
-            ToggleImmersiveSpaceButton()
+        Group {
+            switch appModel.currentGameState {
+            case .startScreen:
+                StartScreenView()
+            case .tutorial:
+                TutorialView()
+            case .loading:
+                LoadingView()
+            case .playing:
+                EmptyView()
+            case .won:
+                GameResultView(isWin: true)
+            case .lost:
+                GameResultView(isWin: false)
+            }
         }
-        .padding()
     }
 }
 
