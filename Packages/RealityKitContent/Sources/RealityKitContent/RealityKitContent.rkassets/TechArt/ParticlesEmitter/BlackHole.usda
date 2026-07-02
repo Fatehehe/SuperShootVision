@@ -11,7 +11,7 @@
 def Xform "Root"
 {
     reorder nameChildren = ["Core_Black", "Core", "Sparks"]
-    float3 xformOp:scale = (5, 5, 5)
+    float3 xformOp:scale = (20, 20, 20)
     uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
     def Xform "Core"
