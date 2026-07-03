@@ -1,5 +1,6 @@
 {
   "pathsToIds" : {
+    "\/RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/Bullet.usda" : "EE76206E-FC29-496B-B0FA-932275690FEE",
     "\/RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/FullImmersive.usda" : "355ECB80-479A-4960-A991-FDFA713CEE69",
     "\/RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/Goblin.usda" : "9FB26BB4-7CD6-4AEC-AAE1-5BE41BCA5908",
     "\/RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/GridMaterial.usda" : "CB766F92-EE55-4A63-9401-E7B8C009764D",
@@ -15,6 +16,7 @@
     "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/MedievalScene.usda" : "4CAC1762-29ED-4E23-9175-6B6D1511DFA1",
     "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/Scene.usda" : "D66134B1-3681-4A8E-AFE5-29F257229F3B",
     "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/TechArt\/Mesh\/BlueHouses.usdc" : "B54B002E-0933-4752-82CC-8D50C0D32679",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/TechArt\/Mesh\/Bullet.usdc" : "790C65C5-EFE5-4531-BFC1-4BA564D78965",
     "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/TechArt\/Mesh\/Flintlock_Gun.usdc" : "824BA8AB-1A3E-46C7-9D3C-0C737CDDD218",
     "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/TechArt\/Mesh\/Floor2.usdc" : "B361D3BE-B5BA-4BD6-8409-1EA09FB3537E",
     "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/TechArt\/Mesh\/Goblin_T-Pose-2.usdc" : "8226F3B9-CF5B-45EF-B8A6-1BE3066E991A",
@@ -34,6 +36,7 @@
     "4CAC1762-29ED-4E23-9175-6B6D1511DFA1" : -1438155180261012478,
     "534BA0CA-0D32-4248-98FD-61EF903B7F45" : -5501565254698793764,
     "561C32B3-DFBD-4791-9534-E00AA01D8E9D" : -9101832884980164431,
+    "790C65C5-EFE5-4531-BFC1-4BA564D78965" : -4059314939101265649,
     "8226F3B9-CF5B-45EF-B8A6-1BE3066E991A" : -4401088195415416796,
     "824BA8AB-1A3E-46C7-9D3C-0C737CDDD218" : -7033314075814739570,
     "868BC840-600A-4D32-9FA5-42D80D1E8B45" : -5319023609191336670,
@@ -44,6 +47,7 @@
     "BD1D16B4-E851-419C-B07F-8B86926E7E98" : 6725592914969434400,
     "BEACD9B4-3A05-4E46-9676-408731EE9E07" : 1816287891967031162,
     "E509476F-4A4F-4E63-B0B6-A43961F025D9" : 2231340282321725245,
-    "ECA34E16-F0F0-46AA-85B8-9607E59DD404" : 1508579541229367331
+    "ECA34E16-F0F0-46AA-85B8-9607E59DD404" : 1508579541229367331,
+    "EE76206E-FC29-496B-B0FA-932275690FEE" : 8140934017052416801
   }
 }

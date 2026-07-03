@@ -16,6 +16,15 @@ def Xform "Root"
     )
     {
         float3 xformOp:scale = (0.015, 0.015, 0.015)
+
+        over "OnAddedToScene"
+        {
+            over "Action"
+            {
+                rel affectedObjects = </Root/Goblin_T_Pose_2>
+                rel animationLibraryKey = </Root/Goblin_T_Pose_2/WalkAndHit>
+            }
+        }
     }
 }
 
