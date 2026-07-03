@@ -445,6 +445,18 @@
       }
     ]
   },
+  "8EAF85A2-526B-437F-8008-60F5DDC9C95B" : {
+    "objectMetadataList" : [
+      [
+        "8EAF85A2-526B-437F-8008-60F5DDC9C95B",
+        "Root"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      }
+    ]
+  },
   "9FB26BB4-7CD6-4AEC-AAE1-5BE41BCA5908" : {
     "objectMetadataList" : [
       [
@@ -612,6 +624,18 @@
         "Root",
         "GridMaterial",
         "GridMaterial"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      }
+    ]
+  },
+  "E197A3E9-ACEA-4BE4-BE1D-6C46AF0E0976" : {
+    "objectMetadataList" : [
+      [
+        "E197A3E9-ACEA-4BE4-BE1D-6C46AF0E0976",
+        "Root"
       ],
       {
         "isExpanded" : true,
