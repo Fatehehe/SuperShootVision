@@ -20,6 +20,9 @@ public struct SystemRegistry {
         
         PortalComponent.registerComponent()
         PortalSystem.registerSystem()
+        
+        EnemyComponent.registerComponent()
+        EnemySystem.registerSystem()
     }
 }
 

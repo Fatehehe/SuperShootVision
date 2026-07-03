@@ -28,11 +28,11 @@ public struct PortalSystem: System {
             return
         }
         
-//        var activeTower: Entity? = nil
-//        for tower in context.scene.performQuery(Self.towerQuery) {
-//            activeTower = tower
-//            break
-//        }
+        var activeTower: Entity? = nil
+        for tower in context.scene.performQuery(Self.towerQuery) {
+            activeTower = tower
+            break
+        }
 
         for entity in context.scene.performQuery(Self.portalQuery) {
             guard var portalComp = entity.components[PortalComponent.self] else { continue }
@@ -44,28 +44,24 @@ public struct PortalSystem: System {
                     let spawnedEnemy = enemyTemplate.clone(recursive: true)
                     spawnedEnemy.name = "GoblinEnemy"
                                     
-                    // 1. Ambil posisi pusat portal di koordinat dunia (World Space)
                     let centerPosition = entity.position(relativeTo: nil)
                                                         
-                    // 2. Tambahkan ke scene (di parent yang sama dengan portal, yaitu rootWorld)
                     if let parent = entity.parent {
                         parent.addChild(spawnedEnemy)
                     }
                                     
-                    // 3. Set posisi musuh TEPAT di titik tengah portal
                     spawnedEnemy.setPosition(centerPosition, relativeTo: nil)
                                     
-                    // Rotasi musuh (jika diperlukan)
                     let rotationAngle: Float = .pi / 2
                     let rotationAxis = SIMD3<Float>(0, 1, 0)
                     let rotation = simd_quatf(angle: rotationAngle, axis: rotationAxis)
                     spawnedEnemy.transform.rotation = spawnedEnemy.transform.rotation * rotation
 
-//                    if let towerEntity = activeTower {
-//                        var enemyComp = EnemyComponent()
-//                        enemyComp.targetTower = towerEntity
-//                        spawnedEnemy.components.set(enemyComp)
-//                    }
+                    if let towerEntity = activeTower {
+                        var enemyComp = EnemyComponent()
+                        enemyComp.targetTowerPosition = towerEntity.position(relativeTo: nil)
+                        spawnedEnemy.components.set(enemyComp)
+                    }
                     
                     if let parent = entity.parent {
                         parent.addChild(spawnedEnemy)
