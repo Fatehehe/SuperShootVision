@@ -19,7 +19,8 @@ struct GameResultView: View {
                 .font(.system(size: 60, weight: .black, design: .rounded))
                 .foregroundColor(isWin ? .green : .red)
             
-            Text(isWin ? "Kamu berhasil melindungi menara dari semua monster!" : "Menara hancur lebur... Dunia telah jatuh.")
+            Text(isWin ? "You successfully defended the tower from every monster!"
+                 : "The tower has fallen... The kingdom is lost.")
                 .font(.title2)
                 .multilineTextAlignment(.center)
             
@@ -29,7 +30,7 @@ struct GameResultView: View {
                     dismissWindow(id: appModel.windowGroupID)
                 }
             }) {
-                Text("Main Lagi")
+                Text("Play Again")
                     .font(.title2)
                     .padding(.horizontal, 40)
                     .padding(.vertical, 15)

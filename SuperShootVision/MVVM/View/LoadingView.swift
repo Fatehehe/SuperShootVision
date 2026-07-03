@@ -18,12 +18,12 @@ struct LoadingView: View {
                 .symbolEffect(.pulse, options: .repeating, isActive: isPulsing)
             
             VStack(spacing: 12) {
-                Text("Memasuki Medan Pertempuran...")
+                Text("Entering the battlefield...")
                     .font(.title)
                     .fontWeight(.bold)
                     .foregroundStyle(.primary)
                 
-                Text("Menyiapkan Dunia...")
+                Text("Preparing the world...")
                     .font(.title3)
                     .foregroundStyle(.secondary)
             }

@@ -23,17 +23,33 @@ struct TutorialView: View {
                 .padding(.bottom, 20)
             
             TabView(selection: $currentStep) {
-                TutorialSlide(icon: "hand.raised.fill", title: "1. Arahkan tembakanmu", description: "Arahkan tembakan yg ada di tanganmu untuk mengincar musuh.")
-                    .tag(0)
-                
-                TutorialSlide(icon: "hand.thumbsup.fill", title: "2. Tembak!", description: "genggam semua jari kamu untuk menembakkan peluru!")
-                    .tag(1)
-                
-                TutorialSlide(icon: "scope", title: "3. Lindungi Tower", description: "Jangan sampai monster mendekati menara!")
-                    .tag(2)
-                
-                TutorialSlide(icon: "flame.fill", title: "4. ARE YOU READY?", description: "Kamu Pasti Bisa!")
-                    .tag(3)
+                TutorialSlide(
+                    icon: "hand.raised.fill",
+                    title: "1. Aim Your Weapon",
+                    description: "Point your weapon at the enemies to aim."
+                )
+                .tag(0)
+
+                TutorialSlide(
+                    icon: "hand.thumbsup.fill",
+                    title: "2. Fire!",
+                    description: "Make a fist to shoot!"
+                )
+                .tag(1)
+
+                TutorialSlide(
+                    icon: "scope",
+                    title: "3. Defend the Tower",
+                    description: "Don't let the monsters reach the tower!"
+                )
+                .tag(2)
+
+                TutorialSlide(
+                    icon: "flame.fill",
+                    title: "4. ARE YOU READY?",
+                    description: "Good luck, Defender!"
+                )
+                .tag(3)
             }
             .tabViewStyle(.page(indexDisplayMode: .always))
             .frame(height: 350)
@@ -43,7 +59,7 @@ struct TutorialView: View {
                     Button(action: {
                         withAnimation { currentStep += 1 }
                     }) {
-                        Text("Selanjutnya")
+                        Text("Next")
                             .font(.title3.bold())
                             .padding(.horizontal, 30)
                             .padding(.vertical, 10)
@@ -57,7 +73,7 @@ struct TutorialView: View {
                             await openImmersiveSpace(id: appModel.immersiveSpaceID)
                         }
                     }) {
-                        Label("Paham, Mari Mulai!", systemImage: "checkmark.circle.fill")
+                        Label("Start the game!", systemImage: "checkmark.circle.fill")
                             .font(.title3.bold())
                             .padding(.horizontal, 30)
                             .padding(.vertical, 10)

@@ -18,7 +18,7 @@ struct ImmersiveView: View {
         RealityView { content, attachments in
             SystemRegistry.registerAllSystems()
             
-            if let medievalWorld = await MedievalSceneSpawner.spawnMedievalWorld(named: "MedievalScene"){
+            if let medievalWorld = await MedievalSceneSpawner.spawnMedievalWorld(named: "FullImmersive"){
                 content.add(medievalWorld)
             }
             

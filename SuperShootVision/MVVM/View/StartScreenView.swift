@@ -19,7 +19,7 @@ struct StartScreenView: View {
                 .padding(.bottom, 10)
             
             VStack(spacing: 15) {
-                Text("TOWER DEFENSE")
+                Text("TOWER TRIGGER")
                     .font(.system(size: 64, weight: .black, design: .rounded))
                     .foregroundStyle(
                         LinearGradient(
@@ -30,7 +30,7 @@ struct StartScreenView: View {
                     )
                     .tracking(3)
                 
-                Text("Selamatkan menara dari invasi monster antar-dimensi!")
+                Text("Protect the tower from an interdimensional monster invasion!")
                     .font(.title2)
                     .foregroundColor(.secondary)
             }
@@ -40,7 +40,7 @@ struct StartScreenView: View {
                     appModel.currentGameState = .tutorial
                 }
             }) {
-                Label("Mulai Permainan", systemImage: "play.fill")
+                Label("Start Game", systemImage: "play.fill")
                     .font(.title2.weight(.bold))
                     .padding(.horizontal, 40)
                     .padding(.vertical, 15)

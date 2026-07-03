@@ -17,7 +17,7 @@ struct GameplayHUDView: View {
                 Image(systemName: "figure.boxing")
                     .font(.title3)
                 
-                Text("MUSUH :")
+                Text("ENEMY :")
                     .font(.subheadline)
                     .foregroundColor(.secondary)
                             
