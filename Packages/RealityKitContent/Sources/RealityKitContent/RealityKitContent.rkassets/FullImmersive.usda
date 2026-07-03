@@ -10,6 +10,10 @@
 
 def Xform "Root"
 {
+    quatf xformOp:orient = (1, 0, 0, 0)
+    float3 xformOp:scale = (1, 1, 1)
+    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
     def "MedievalScene" (
         active = true
         prepend references = @MedievalScene.usda@
@@ -40,6 +44,12 @@ def Xform "Root"
         float3 xformOp:scale = (1, 1, 1)
         float3 xformOp:translate = (-28.611189, 0, 0)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def RealityKitAudioFile "land_of_books_youtube_marching_shadows_223585_mp3"
+    {
+        uniform asset file = @TechArt/Audio/land_of_books_youtube-marching-shadows-223585.mp3@
+        uniform bool shouldLoop = 0
     }
 }
 

@@ -10,9 +10,10 @@
 
 def Xform "Root"
 {
+    reorder nameChildren = ["Spin", "Shoot"]
     def "Bullet" (
         active = true
-        prepend references = @TechArt/Mesh/Bullet.usdc@
+        references = @TechArt/Mesh/Bullet.usdc@
     )
     {
         quatf xformOp:orient = (4.3297803e-17, 4.3297803e-17, 0.70710677, 0.70710677)
@@ -23,11 +24,80 @@ def Xform "Root"
 
     def "BulletWind" (
         active = true
-        prepend references = @TechArt/ParticlesEmitter/BulletWind.usda@
+        references = @TechArt/ParticlesEmitter/BulletWind.usda@
     )
     {
-        float3 xformOp:scale = (1, 1, 1)
+        float3 xformOp:scale = (0.2, 0.3, 0.2)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def RealityKitTimeline "Spin"
+    {
+        def RealityKitTrack "Track"
+        {
+            def RealityKitAction "Spin"
+            {
+                string actionKind = "spin"
+                int blendLayer = 400
+                double duration = 1
+                uniform token info:id = "78DF1EFC-C181-4EBE-8179-8F588B0E5F5F"
+                float revolutions = 2
+                double startTime = 0
+                rel target = </Root/Bullet>
+
+                def RealityKitStruct "timingFunction"
+                {
+                    token type = "cubicBezier"
+                }
+            }
+        }
+    }
+
+    def RealityKitTimeline "Shoot"
+    {
+        def RealityKitTrack "Track"
+        {
+            def RealityKitAction "Play_Timeline"
+            {
+                string actionKind = "timeline"
+                int blendLayer = 500
+                double duration = 1
+                uniform token info:id = "E19B5E06-CB03-4C5F-997C-8528DEE3822A"
+                double loopCount = 0
+                double startTime = 0
+                rel timeline = </Root/Spin>
+            }
+        }
+    }
+
+    def RealityKitComponent "RCP_BehaviorsContainer"
+    {
+        rel behaviors = </Root/OnAddedToScene>
+        uniform token info:id = "RCP.BehaviorsContainer"
+    }
+
+    def Preliminary_Behavior "OnAddedToScene"
+    {
+        rel actions = </Root/OnAddedToScene/Action>
+        uniform bool exclusive
+        rel triggers = </Root/OnAddedToScene/Trigger>
+
+        def Preliminary_Trigger "Trigger"
+        {
+            rel affectedObjects = </Root>
+            token info:id = "SceneTransition"
+        }
+
+        def Preliminary_Action "Action"
+        {
+            rel affectedObjects = </Root>
+            rel animationLibraryKey = </Root/Shoot>
+            rel animationLibraryKeyOverrideKey = </Root/OnAddedToScene/Trigger>
+            token info:id = "PlayTimeline"
+            int loops = 0
+            int performCount = 1
+            token type = "serial"
+        }
     }
 }
 

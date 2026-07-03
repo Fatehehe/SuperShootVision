@@ -60,15 +60,6 @@
     "objectMetadataList" : [
       [
         "355ECB80-479A-4960-A991-FDFA713CEE69",
-        "Root",
-        "Goblin"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "355ECB80-479A-4960-A991-FDFA713CEE69",
         "Root"
       ],
       {
@@ -82,6 +73,35 @@
       [
         "4CAC1762-29ED-4E23-9175-6B6D1511DFA1",
         "Root"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "4CAC1762-29ED-4E23-9175-6B6D1511DFA1",
+        "Root",
+        "BGM",
+        "Track"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "4CAC1762-29ED-4E23-9175-6B6D1511DFA1",
+        "Root",
+        "BGM"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "4CAC1762-29ED-4E23-9175-6B6D1511DFA1",
+        "Root",
+        "Timeline",
+        "Track"
       ],
       {
         "isExpanded" : true,
@@ -680,7 +700,55 @@
     "objectMetadataList" : [
       [
         "EE76206E-FC29-496B-B0FA-932275690FEE",
+        "Root",
+        "Shoot"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "EE76206E-FC29-496B-B0FA-932275690FEE",
+        "Root",
+        "Shoot",
+        "Track"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "EE76206E-FC29-496B-B0FA-932275690FEE",
+        "Root",
+        "Spin"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "EE76206E-FC29-496B-B0FA-932275690FEE",
+        "Root",
+        "Timeline",
+        "Track"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "EE76206E-FC29-496B-B0FA-932275690FEE",
         "Root"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "EE76206E-FC29-496B-B0FA-932275690FEE",
+        "Root",
+        "Spin",
+        "Track"
       ],
       {
         "isExpanded" : true,
