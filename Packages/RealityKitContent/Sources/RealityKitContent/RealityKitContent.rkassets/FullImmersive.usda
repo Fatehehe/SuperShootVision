@@ -33,7 +33,7 @@ def Xform "Root"
     }
 
     def "Goblin" (
-        active = true
+        active = false
         customData = {
             float3 rotationEulerHint = (0, 1.5707963, 0)
         }
