@@ -28,7 +28,7 @@ public struct GloveSpawner {
         
         if let gunModel = await loadAsset(named: "Gun") {
             gunModel.name = "RightGun"
-            gunModel.components.set(WeaponComponent())
+            gunModel.components.set(WeaponComponent(chirality: .right))
             let angleX: Float = .pi / 2
             let angleZ: Float = .pi
       
@@ -44,7 +44,7 @@ public struct GloveSpawner {
             if let nozzlePoint = gunModel.findEntity(named: "SpawnerPoint") {
                 let nozzleComp = NozzleComponent()
                 nozzlePoint.components.set(nozzleComp)
-                gunModel.addChild(nozzlePoint)
+//                gunModel.addChild(nozzlePoint)
             }
             
             rightHand.addChild(gunModel)

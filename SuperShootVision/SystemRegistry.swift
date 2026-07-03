@@ -23,6 +23,8 @@ public struct SystemRegistry {
         
         EnemyComponent.registerComponent()
         EnemySystem.registerSystem()
+        
+        GunSlingerSystem.registerSystem()
     }
 }
 

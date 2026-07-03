@@ -31,6 +31,8 @@ public class HandVisualizationSystem: System {
                 anchorEntity.isEnabled = false
                 continue
             }
+            
+            let isTriggerPose = HandPoseDetector.detect(handSkeleton: skeleton, thumb: true, index: true, mid: true, ring: true, little: true)
 
             anchorEntity.isEnabled = true
             anchorEntity.transform = Transform(matrix: trackedHand.originFromAnchorTransform)
