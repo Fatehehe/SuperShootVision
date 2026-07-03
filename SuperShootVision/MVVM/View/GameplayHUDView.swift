@@ -18,7 +18,7 @@ struct GameplayHUDView: View {
                     .font(.title3)
                     .foregroundColor(.secondary)
                 
-                Text("PANAH :")
+                Text("GUN LOAD :")
                     .font(.subheadline)
                     .fontWeight(.medium)
                     .foregroundColor(.secondary)
@@ -40,10 +40,10 @@ struct GameplayHUDView: View {
                     .font(.subheadline)
                     .foregroundColor(.secondary)
                             
-//                Text("\(appModel.enemiesDefeated) / \(appModel.totalEnemiesToWin)")
-//                    .font(.headline)
-//                    .bold()
-//                    .frame(minWidth: 60, alignment: .leading)
+                Text("\(appModel.enemiesDefeated) / \(appModel.totalEnemiesToWin)")
+                    .font(.headline)
+                    .bold()
+                    .frame(minWidth: 60, alignment: .leading)
             }
             
             Divider()
@@ -52,35 +52,26 @@ struct GameplayHUDView: View {
             HStack(spacing: 8) {
                 Image(systemName: "heart.fill")
                     .font(.title3)
-//                    .foregroundColor(appModel.towerHp <= 10 ? .red : .green)
+                    .foregroundColor(appModel.towerHp <= 10 ? .red : .green)
                 
                 Text("HP TOWER :")
                     .font(.subheadline)
                     .fontWeight(.medium)
                     .foregroundColor(.secondary)
                 
-//                Text("\(appModel.towerHp)")
-//                    .font(.headline)
-//                    .bold()
-//                    .frame(minWidth: 40, alignment: .leading)
+                Text("\(appModel.towerHp)")
+                    .font(.headline)
+                    .bold()
+                    .frame(minWidth: 40, alignment: .leading)
             }
         }
         .padding(.horizontal, 24)
         .padding(.vertical, 16)
         .glassBackgroundEffect(in: Capsule())
-//        .onReceive(NotificationCenter.default.publisher(for: .archeryStateDidChange)) { notification in
-//            if let newState = notification.object as? ArcheryState {
-//                appModel.arrowState = newState
-//                
-//                if appModel.immersiveSpaceState != .open {
-//                    appModel.immersiveSpaceState = .open
-//                }
-//            }
-//        }
-//        .onReceive(NotificationCenter.default.publisher(for: .towerGetHit)) { notification in
-//            if let newHP = notification.object as? Int {
-//                appModel.towerHp = newHP
-//            }
-//        }
+        .onReceive(NotificationCenter.default.publisher(for: .towerGetHit)) { notification in
+            if let newHP = notification.object as? Int {
+                appModel.towerHp = newHP
+            }
+        }
     }
 }

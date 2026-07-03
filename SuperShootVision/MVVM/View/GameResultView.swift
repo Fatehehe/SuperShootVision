@@ -23,19 +23,19 @@ struct GameResultView: View {
                 .font(.title2)
                 .multilineTextAlignment(.center)
             
-//            Button(action: {
-//                Task {
-//                    appModel.resetGame()
-//                    dismissWindow(id: appModel.windowId)
-//                }
-//            }) {
-//                Text("Main Lagi")
-//                    .font(.title2)
-//                    .padding(.horizontal, 40)
-//                    .padding(.vertical, 15)
-//            }
-//            .buttonStyle(.borderedProminent)
-//            .tint(.blue)
+            Button(action: {
+                Task {
+                    appModel.resetGame()
+                    dismissWindow(id: appModel.windowGroupID)
+                }
+            }) {
+                Text("Main Lagi")
+                    .font(.title2)
+                    .padding(.horizontal, 40)
+                    .padding(.vertical, 15)
+            }
+            .buttonStyle(.borderedProminent)
+            .tint(.blue)
         }
         .padding(50)
         .frame(width: 500)

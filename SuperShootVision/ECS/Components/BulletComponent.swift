@@ -15,4 +15,5 @@ struct BulletComponent: Component {
     var startTime: Double
 
     var lifetime: Double = 3.0
+    public var damage: Int = 10
 }

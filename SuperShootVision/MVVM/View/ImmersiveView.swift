@@ -12,6 +12,7 @@ import ILSHandTracking
 struct ImmersiveView: View {
     @Environment(AppModel.self) var appModel
     @Environment(\.dismissWindow) var dismissWindow
+    @Environment(\.openWindow) var openWindow
     
     var body: some View {
         RealityView { content, attachments in
@@ -40,6 +41,25 @@ struct ImmersiveView: View {
         } attachments: {
             Attachment(id: "gameplay_hud") {
                 GameplayHUDView()
+            }
+        }
+        .onReceive(NotificationCenter.default.publisher(for: .enemyDefeated)) { _ in
+            appModel.enemiesDefeated += 1
+            print("Musuh mati: \(appModel.enemiesDefeated) / \(appModel.totalEnemiesToWin)")
+                    
+            if appModel.enemiesDefeated >= appModel.totalEnemiesToWin {
+                appModel.currentGameState = .won
+            }
+        }
+                
+        .onReceive(NotificationCenter.default.publisher(for: .towerDestroyed)) { _ in
+            appModel.currentGameState = .lost
+            print("Tower Hancur ditangkap oleh ImmersiveView!")
+        }
+        .onChange(of: appModel.currentGameState) { _, newState in
+            if newState == .won || newState == .lost {
+                appModel.stopGame()
+                openWindow(id: appModel.windowGroupID)
             }
         }
         .task {

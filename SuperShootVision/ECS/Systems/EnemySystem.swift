@@ -46,7 +46,7 @@ public struct EnemySystem: System {
             let distanceToTower = simd_distance(currentPos, enemyComp.targetTowerPosition)
 //            print("distance: \(distanceToTower)")
             
-            if distanceToTower <= 1.5 {
+            if distanceToTower <= 2 {
                 if currentTime - enemyComp.lastDamageTime >= enemyComp.damageInterval {
                     
                     if let tower = activeTower, var towerComp = tower.components[TowerComponent.self] {
@@ -54,18 +54,19 @@ public struct EnemySystem: System {
                         print("Menara diserang! Sisa HP: \(towerComp.hp)")
                         
                         tower.components.set(towerComp)
-//                        let currentHp = towerComp.hp
-//                        Task { @MainActor in
-//                            NotificationCenter.default.post(name: .towerGetHit, object: currentHp)
-//                        }
+                        let currentHp = towerComp.hp
+                        Task { @MainActor in
+                            
+                            NotificationCenter.default.post(name: .towerGetHit, object: currentHp)
+                        }
                         
                         if towerComp.hp <= 0 {
                             print("tower hancur!")
-//                            Task { @MainActor in
-//                                NotificationCenter.default.post(name: .towerDestroyed, object: nil)
-//                            }
-//                            context.scene.performQuery(Self.query).forEach { $0.removeFromParent() }
-//                            return
+                            Task { @MainActor in
+                                NotificationCenter.default.post(name: .towerDestroyed, object: nil)
+                            }
+                            context.scene.performQuery(Self.query).forEach { $0.removeFromParent() }
+                            return
                         }
                     }
                     
