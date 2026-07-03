@@ -9,7 +9,7 @@ import RealityKit
 import Foundation
 
 public struct EnemyComponent: Component {
-    public var hp: Int = 100
+    public var hp: Int = 50
     
     public var targetTowerPosition: SIMD3<Float> = .zero
     

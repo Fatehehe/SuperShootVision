@@ -28,7 +28,7 @@ struct SuperShootVisionApp: App {
                     appModel.immersiveSpaceState = .closed
                 }
         }
-        .immersionStyle(selection: .constant(.mixed), in: .mixed)
+        .immersionStyle(selection: .constant(.full), in: .full)
         .upperLimbVisibility(.hidden)
      }
 }
