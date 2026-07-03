@@ -30,4 +30,12 @@ class AppModel {
     }
     
     var currentGameState = GameState.startScreen
+    
+    func playGame() {
+        GameStateTracker.isPlaying = true
+    }
+    
+    func stopGame() {
+        GameStateTracker.isPlaying = false
+    }
 }

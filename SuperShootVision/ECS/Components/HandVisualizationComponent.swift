@@ -15,11 +15,3 @@ public struct HandVisualizationComponent: Component {
         self.chirality = chirality
     }
 }
-
-public struct WeaponComponent: Component {
-    public let chirality: HandAnchor.Chirality
-    
-    public init(chirality: HandAnchor.Chirality) {
-        self.chirality = chirality
-    }
-}

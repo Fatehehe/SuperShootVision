@@ -16,28 +16,35 @@ public struct MedievalSceneSpawner {
             
             print("[MedievalSceneSpawner] Sukses memuat dunia: \(sceneName)")
             
-            if let targetBullsEye = rootWorld.findEntity(named: "Tower") {
-                print("ada tower")
-//                var towerData = TowerComponent()
-//                towerData.hp = 100
-//                targetBullsEye.components.set(towerData)
-            }else{
-                print("no tower")
+            if let tower = rootWorld.findEntity(named: "Tower") {
+                var towerData = TowerComponent()
+                towerData.hp = 100
+                tower.components.set(towerData)
+                rootWorld.addChild(tower)
             }
             
-            if let targetBullsEye = rootWorld.findEntity(named: "BlackHole") {
-                print("ada blackhole")
-//                var towerData = TowerComponent()
-//                towerData.hp = 100
-//                targetBullsEye.components.set(towerData)
-            }else{
-                print("no blackhole")
+            if let portalEnemy = rootWorld.findEntity(named: "BlackHole") {
+                if let portalEnemy = await spawnEnemyPortal() {
+                    var portalData = PortalComponent()
+                    portalData.enemy = portalEnemy
+                    portalEnemy.components.set(portalData)
+                    rootWorld.addChild(portalEnemy)
+                }
             }
-            
             return rootWorld
-            
         } catch {
             print("[MedievalSceneSpawner] Gagal memuat scene '\(sceneName)': \(error)")
+            return nil
+        }
+    }
+    
+    public static func spawnEnemyPortal() async -> Entity? {
+        do {
+            let enemy = try await Entity(named: "Goblin", in: realityKitContentBundle)
+            print("[MedievalSceneSpawner] Sukses memuat enemy: \(enemy.name)")
+            return enemy
+        }catch{
+            print("[PortalSpawner] Gagal memuat Portal dari RCP: \(error)")
             return nil
         }
     }

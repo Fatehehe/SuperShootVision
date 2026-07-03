@@ -4,14 +4,20 @@
     "\/RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/Immersive.usda" : "65F6F990-A780-4474-B78B-572E0E4E273D",
     "\/RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/Scene.usda" : "0A9B4653-B11E-4D6A-850E-C6FCB621626C",
     "\/RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/Untitled Scene.usda" : "D560BB77-AAF3-4BDE-B7C4-989332A4688B",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/Goblin.usda" : "8C3E5629-68B1-45A7-B48A-25637E76D90A",
     "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/GridMaterial.usda" : "66168B71-AB05-424E-8B6C-D33D6E61B08F",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/Gun.usda" : "93AFBA1A-33EA-47EC-81D7-AFBD802DC7CA",
     "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/Immersive.usda" : "AF09ED6F-1707-48FD-8720-65B998362C09",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/LeftGlove.usda" : "B316FD86-131B-407A-AFF3-7C5D60A6C2A4",
     "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/MedievalScene.usda" : "8A221404-B681-4CDC-97B2-AE8C2D93ED11",
     "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/Scene.usda" : "D66134B1-3681-4A8E-AFE5-29F257229F3B"
   },
   "projectID" : 6313654312784418693,
   "uuidToIntID" : {
     "8A221404-B681-4CDC-97B2-AE8C2D93ED11" : -8691294683610665494,
-    "AF09ED6F-1707-48FD-8720-65B998362C09" : -1190000566368459112
+    "8C3E5629-68B1-45A7-B48A-25637E76D90A" : -2164422052082343541,
+    "93AFBA1A-33EA-47EC-81D7-AFBD802DC7CA" : 2311383958531186355,
+    "AF09ED6F-1707-48FD-8720-65B998362C09" : -1190000566368459112,
+    "B316FD86-131B-407A-AFF3-7C5D60A6C2A4" : 4994533597378511033
   }
 }

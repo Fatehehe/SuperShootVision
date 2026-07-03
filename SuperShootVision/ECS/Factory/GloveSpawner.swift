@@ -28,23 +28,25 @@ public struct GloveSpawner {
         
         if let gunModel = await loadAsset(named: "Gun") {
             gunModel.name = "RightGun"
-            gunModel.components.set(WeaponComponent(chirality: .right))
+            gunModel.components.set(WeaponComponent())
             let angleX: Float = .pi / 2
             let angleZ: Float = .pi
-//            
+      
             let rotationX = simd_quatf(angle: angleX, axis: SIMD3<Float>(1, 0, 0))
             let rotationZ = simd_quatf(angle: angleZ, axis: SIMD3<Float>(0, 0, 1))
-//
+
             let gunOffsetX: Float = -0.07
             let gunOffsetY: Float = -0.03
             let gunOffsetZ: Float = 0.035
             gunModel.transform.translation = SIMD3<Float>(gunOffsetX, gunOffsetY, gunOffsetZ)
     
             gunModel.transform.rotation = rotationZ * rotationX
-            if let spawnerPoint = gunModel.findEntity(named: "SpawnerPoint") {
-                print("ada spawner")
+            if let nozzlePoint = gunModel.findEntity(named: "SpawnerPoint") {
+                let nozzleComp = NozzleComponent()
+                nozzlePoint.components.set(nozzleComp)
+                gunModel.addChild(nozzlePoint)
             }
-
+            
             rightHand.addChild(gunModel)
         }
         

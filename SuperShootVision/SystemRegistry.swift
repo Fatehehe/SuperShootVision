@@ -17,6 +17,9 @@ public struct SystemRegistry {
         HandVisualizationSystem.registerSystem()
         
         WeaponComponent.registerComponent()
+        
+        PortalComponent.registerComponent()
+        PortalSystem.registerSystem()
     }
 }
 

@@ -35,6 +35,7 @@ struct ImmersiveView: View {
             content.add(headAnchor)
             
             appModel.currentGameState = .playing
+            appModel.playGame()
             dismissWindow(id: appModel.windowGroupID)
         } attachments: {
             Attachment(id: "gameplay_hud") {
