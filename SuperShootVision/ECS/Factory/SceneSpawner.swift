@@ -17,6 +17,8 @@ public struct MedievalSceneSpawner {
             print("[MedievalSceneSpawner] Sukses memuat dunia: \(sceneName)")
             
             if let tower = rootWorld.findEntity(named: "Tower") {
+                print("[Tower] Local Position: \(tower.position)")
+                print("[Tower] World Position: \(tower.position(relativeTo: nil))")
                 var towerData = TowerComponent()
                 towerData.hp = 100
                 tower.components.set(towerData)
@@ -24,12 +26,14 @@ public struct MedievalSceneSpawner {
             }
             
             if let portalEnemy = rootWorld.findEntity(named: "BlackHole") {
-                if let portalEnemy = await spawnEnemyPortal() {
-                    var portalData = PortalComponent()
-                    portalData.enemy = portalEnemy
-                    portalEnemy.components.set(portalData)
-                    rootWorld.addChild(portalEnemy)
+                print("[portalEnemy] Local Position: \(portalEnemy.position)")
+                print("[portalEnemy] World Position: \(portalEnemy.position(relativeTo: nil))")
+                var portalData = PortalComponent()
+                if let enemy = await spawnEnemyPortal() {
+                    portalData.enemy = enemy
                 }
+                portalEnemy.components.set(portalData)
+                rootWorld.addChild(portalEnemy)
             }
             return rootWorld
         } catch {
