@@ -51,5 +51,20 @@ def Xform "Root"
         uniform asset file = @TechArt/Audio/land_of_books_youtube-marching-shadows-223585.mp3@
         uniform bool shouldLoop = 0
     }
+
+    def Xform "DirectionalLight"
+    {
+        float3 xformOp:translate = (0, 21.193048, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def RealityKitComponent "DirectionalLight"
+        {
+            token info:id = "RealityKit.DirectionalLight"
+
+            def RealityKitStruct "Shadow"
+            {
+            }
+        }
+    }
 }
 
