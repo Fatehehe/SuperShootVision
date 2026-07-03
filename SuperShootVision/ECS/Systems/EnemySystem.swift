@@ -54,14 +54,11 @@ public struct EnemySystem: System {
                         print("Menara diserang! Sisa HP: \(towerComp.hp)")
                         
                         tower.components.set(towerComp)
-                        
 //                        let currentHp = towerComp.hp
-//                        print("tower hp: \(currentHp)")
 //                        Task { @MainActor in
 //                            NotificationCenter.default.post(name: .towerGetHit, object: currentHp)
 //                        }
                         
-                        // Jika Tower Hancur
                         if towerComp.hp <= 0 {
                             print("tower hancur!")
 //                            Task { @MainActor in
