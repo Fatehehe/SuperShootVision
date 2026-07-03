@@ -15,7 +15,7 @@ struct StartScreenView: View {
         VStack(spacing: 40) {
             Image(systemName: "target")
                 .font(.system(size: 100))
-                .foregroundStyle(.blue, .purple)
+                .foregroundStyle(.red, .yellow)
                 .padding(.bottom, 10)
             
             VStack(spacing: 15) {
@@ -23,7 +23,7 @@ struct StartScreenView: View {
                     .font(.system(size: 64, weight: .black, design: .rounded))
                     .foregroundStyle(
                         LinearGradient(
-                            colors: [.cyan, .blue, .purple],
+                            colors: [.red, .orange, .yellow],
                             startPoint: .topLeading,
                             endPoint: .bottomTrailing
                         )
@@ -40,14 +40,14 @@ struct StartScreenView: View {
                     appModel.currentGameState = .tutorial
                 }
             }) {
-                Label("Mulai Petualangan", systemImage: "play.fill")
+                Label("Mulai Permainan", systemImage: "play.fill")
                     .font(.title2.weight(.bold))
                     .padding(.horizontal, 40)
                     .padding(.vertical, 15)
             }
             .buttonStyle(.borderedProminent)
             .buttonBorderShape(.capsule)
-            .tint(.blue)
+            .tint(.red)
             .padding(.top, 20)
         }
         .padding(80)

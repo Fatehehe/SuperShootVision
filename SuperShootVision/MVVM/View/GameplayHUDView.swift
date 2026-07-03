@@ -12,25 +12,6 @@ struct GameplayHUDView: View {
     
     var body: some View {
         HStack(spacing: 20) {
-            
-            HStack(spacing: 8) {
-                Image(systemName: "target")
-                    .font(.title3)
-                    .foregroundColor(.secondary)
-                
-                Text("GUN LOAD :")
-                    .font(.subheadline)
-                    .fontWeight(.medium)
-                    .foregroundColor(.secondary)
-                
-//                Text("\(appModel.arrowState.rawValue)")
-//                    .font(.headline)
-//                    .bold()
-//                    .textCase(.uppercase)
-//                    .frame(minWidth: 80, alignment: .leading)
-            }
-            
-            Divider().frame(height: 20)
                         
             HStack(spacing: 8) {
                 Image(systemName: "figure.boxing")

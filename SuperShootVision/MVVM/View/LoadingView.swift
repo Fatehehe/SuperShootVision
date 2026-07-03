@@ -14,7 +14,7 @@ struct LoadingView: View {
         VStack(spacing: 35) {
             Image(systemName: "shield.lefthalf.filled.trianglebadge.exclamationmark")
                 .font(.system(size: 80))
-                .foregroundStyle(.cyan, .blue)
+                .foregroundStyle(.red, .yellow)
                 .symbolEffect(.pulse, options: .repeating, isActive: isPulsing)
             
             VStack(spacing: 12) {
@@ -23,14 +23,14 @@ struct LoadingView: View {
                     .fontWeight(.bold)
                     .foregroundStyle(.primary)
                 
-                Text("Menyiapkan panah dan busur...")
+                Text("Menyiapkan Dunia...")
                     .font(.title3)
                     .foregroundStyle(.secondary)
             }
             
             ProgressView()
                 .controlSize(.large)
-                .tint(.cyan)
+                .tint(.red)
         }
         .padding(60)
         .frame(width: 500, height: 400)

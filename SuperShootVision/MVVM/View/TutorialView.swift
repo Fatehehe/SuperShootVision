@@ -23,16 +23,16 @@ struct TutorialView: View {
                 .padding(.bottom, 20)
             
             TabView(selection: $currentStep) {
-                TutorialSlide(icon: "hand.raised.fill", title: "1. Siapkan Senjata", description: "Renggangkan jari di tangan kiri kamu untuk memunculkan panah sihir.")
+                TutorialSlide(icon: "hand.raised.fill", title: "1. Arahkan tembakanmu", description: "Arahkan tembakan yg ada di tanganmu untuk mengincar musuh.")
                     .tag(0)
                 
-                TutorialSlide(icon: "hand.thumbsup.fill", title: "2. Siapkan Busur", description: "Lakukan gaya 'Thumbs Up' (jempol) untuk memunculkan busur.")
+                TutorialSlide(icon: "hand.thumbsup.fill", title: "2. Tembak!", description: "genggam semua jari kamu untuk menembakkan peluru!")
                     .tag(1)
                 
-                TutorialSlide(icon: "scope", title: "3. Tarik Panah", description: "Dekatkan busur ke panah, kemudian tarik tangan kanan kamu ke belakang.")
+                TutorialSlide(icon: "scope", title: "3. Lindungi Tower", description: "Jangan sampai monster mendekati menara!")
                     .tag(2)
                 
-                TutorialSlide(icon: "flame.fill", title: "4. Tembak!", description: "Buka semua jari tangan kanan kamu untuk melepaskan tembakan maut!")
+                TutorialSlide(icon: "flame.fill", title: "4. ARE YOU READY?", description: "Kamu Pasti Bisa!")
                     .tag(3)
             }
             .tabViewStyle(.page(indexDisplayMode: .always))
@@ -84,7 +84,7 @@ struct TutorialSlide: View {
             Image(systemName: icon)
                 .font(.system(size: 90))
                 .symbolRenderingMode(.hierarchical)
-                .foregroundStyle(.cyan)
+                .foregroundStyle(.red)
                 .padding(.bottom, 10)
             
             Text(title)
