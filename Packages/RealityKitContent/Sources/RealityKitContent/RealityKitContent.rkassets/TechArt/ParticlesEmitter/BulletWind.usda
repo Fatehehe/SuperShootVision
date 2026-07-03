@@ -18,19 +18,33 @@ def Xform "Root"
 
             def RealityKitStruct "currentState"
             {
-                token emitterShape = "Point"
+                token emitterShape = "Plane"
+                bool isLocal = 1
+                bool isLocalFields = 1
                 float3 shapeSize = (0.1, 0.1, 0.1)
+                token spawnOccasion = "OnBirth"
+                float spawnSpreadFactor = 0.034906585
+                float spawnVelocityFactor = 10
 
                 def RealityKitStruct "mainEmitter"
                 {
-                    float birthRate = 400
+                    float birthRate = 450
                     float birthRateVariation = 100
-                    float dampingFactor = 8
+                    float dampingFactor = 1
+                    float4 endColorA = (0.0011568674, 0.010504503, 0.25160688, 1)
+                    token opacityOverLife = "QuickFadeInOut"
                     float particleAngle = 0.017453292
-                    float particleAngularVelocity = 0.1
-                    double particleLifeSpan = 0.15
-                    float particleSize = 0.005
+                    float particleAngularVelocity = 1
+                    double particleLifeSpan = 0.9
+                    float particleSize = 0.007
+                    float particleSizeVariation = 0.002
+                    float sizeMultiplierAtEndOfLifespan = 0.5
+                    float sizeMultiplierAtEndOfLifespanPower = 0.5
                     float spreadingAngle = 0.5235988
+                    float4 startColorA = (0.8917878, 0.7947536, 0.63666403, 1)
+                    bool useEndColor = 1
+                    bool useEndColorRange = 0
+                    bool useStartColorRange = 0
                 }
 
                 def RealityKitStruct "spawnedEmitter"

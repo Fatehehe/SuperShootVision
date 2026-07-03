@@ -680,7 +680,55 @@
     "objectMetadataList" : [
       [
         "EE76206E-FC29-496B-B0FA-932275690FEE",
+        "Root",
+        "Shoot"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "EE76206E-FC29-496B-B0FA-932275690FEE",
+        "Root",
+        "Shoot",
+        "Track"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "EE76206E-FC29-496B-B0FA-932275690FEE",
+        "Root",
+        "Spin"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "EE76206E-FC29-496B-B0FA-932275690FEE",
+        "Root",
+        "Timeline",
+        "Track"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "EE76206E-FC29-496B-B0FA-932275690FEE",
         "Root"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "EE76206E-FC29-496B-B0FA-932275690FEE",
+        "Root",
+        "Spin",
+        "Track"
       ],
       {
         "isExpanded" : true,
