@@ -1,6 +1,7 @@
 {
   "pathsToIds" : {
     "\/RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/Bullet.usda" : "EE76206E-FC29-496B-B0FA-932275690FEE",
+    "\/RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/BulletWind.usda" : "E197A3E9-ACEA-4BE4-BE1D-6C46AF0E0976",
     "\/RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/FullImmersive.usda" : "355ECB80-479A-4960-A991-FDFA713CEE69",
     "\/RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/Goblin.usda" : "9FB26BB4-7CD6-4AEC-AAE1-5BE41BCA5908",
     "\/RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/GridMaterial.usda" : "CB766F92-EE55-4A63-9401-E7B8C009764D",
@@ -25,6 +26,7 @@
     "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/TechArt\/Mesh\/Skydome copy.usda" : "561C32B3-DFBD-4791-9534-E00AA01D8E9D",
     "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/TechArt\/Mesh\/watchtower.usdc" : "BEACD9B4-3A05-4E46-9676-408731EE9E07",
     "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/TechArt\/ParticlesEmitter\/BlackHole.usda" : "34D5845C-B0F2-4043-AFA8-624917500BBE",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/TechArt\/ParticlesEmitter\/BulletWind.usda" : "8EAF85A2-526B-437F-8008-60F5DDC9C95B",
     "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/TechArt\/Shaders\/PBR_Material.usda" : "534BA0CA-0D32-4248-98FD-61EF903B7F45"
   },
   "projectID" : -2050167543251504542,
@@ -40,12 +42,14 @@
     "8226F3B9-CF5B-45EF-B8A6-1BE3066E991A" : -4401088195415416796,
     "824BA8AB-1A3E-46C7-9D3C-0C737CDDD218" : -7033314075814739570,
     "868BC840-600A-4D32-9FA5-42D80D1E8B45" : -5319023609191336670,
+    "8EAF85A2-526B-437F-8008-60F5DDC9C95B" : -9157677910120069973,
     "9FB26BB4-7CD6-4AEC-AAE1-5BE41BCA5908" : -5134875088831950396,
     "AF09ED6F-1707-48FD-8720-65B998362C09" : 523747089938924156,
     "B361D3BE-B5BA-4BD6-8409-1EA09FB3537E" : -2628491719355213628,
     "B54B002E-0933-4752-82CC-8D50C0D32679" : -8088923283930235084,
     "BD1D16B4-E851-419C-B07F-8B86926E7E98" : 6725592914969434400,
     "BEACD9B4-3A05-4E46-9676-408731EE9E07" : 1816287891967031162,
+    "E197A3E9-ACEA-4BE4-BE1D-6C46AF0E0976" : 7069094029191208920,
     "E509476F-4A4F-4E63-B0B6-A43961F025D9" : 2231340282321725245,
     "ECA34E16-F0F0-46AA-85B8-9607E59DD404" : 1508579541229367331,
     "EE76206E-FC29-496B-B0FA-932275690FEE" : 8140934017052416801
