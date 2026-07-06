@@ -1,0 +1,70 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "Reality Composer Pro Version 2.0 (494.100.6)"
+    }
+    defaultPrim = "Root"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Xform "Root"
+{
+    quatf xformOp:orient = (1, 0, 0, 0)
+    float3 xformOp:scale = (1, 1, 1)
+    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+    def "MedievalScene" (
+        active = true
+        prepend references = @MedievalScene.usda@
+    )
+    {
+        float3 xformOp:scale = (1, 1, 1)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def "Skydome_copy" (
+        active = true
+        prepend references = @TechArt/Mesh/Skydome copy.usda@
+    )
+    {
+        float3 xformOp:scale = (5, 5, 5)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def "Goblin" (
+        active = false
+        customData = {
+            float3 rotationEulerHint = (0, 1.5707963, 0)
+        }
+        prepend references = @Goblin.usda@
+    )
+    {
+        quatf xformOp:orient = (0.70710677, 0, 0.70710677, 0)
+        float3 xformOp:scale = (1, 1, 1)
+        float3 xformOp:translate = (-28.611189, 0, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def RealityKitAudioFile "land_of_books_youtube_marching_shadows_223585_mp3"
+    {
+        uniform asset file = @TechArt/Audio/land_of_books_youtube-marching-shadows-223585.mp3@
+        uniform bool shouldLoop = 0
+    }
+
+    def Xform "DirectionalLight"
+    {
+        float3 xformOp:translate = (0, 21.193048, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def RealityKitComponent "DirectionalLight"
+        {
+            token info:id = "RealityKit.DirectionalLight"
+
+            def RealityKitStruct "Shadow"
+            {
+            }
+        }
+    }
+}
+

@@ -20,7 +20,7 @@ public class HandVisualizationSystem: System {
             
             guard let visualization = anchorEntity.components[HandVisualizationComponent.self] else { continue }
             
-            guard let gloveWrapper = anchorEntity.children.first else { continue }
+            guard let gloveWrapper = anchorEntity.children.first(where: { !$0.components.has(WeaponComponent.self) }) else { continue }
             guard let gloveModel = findModelEntity(in: gloveWrapper) else { continue }
 
             let handAnchor = (visualization.chirality == .left) ?
@@ -28,12 +28,14 @@ public class HandVisualizationSystem: System {
                 HandTrackingService.shared.latestRightHand
             
             guard let trackedHand = handAnchor, trackedHand.isTracked, let skeleton = trackedHand.handSkeleton else {
-                gloveWrapper.isEnabled = false
+                anchorEntity.isEnabled = false
                 continue
             }
+            
+            let isTriggerPose = HandPoseDetector.detect(handSkeleton: skeleton, thumb: true, index: true, mid: true, ring: true, little: true)
 
-            gloveWrapper.isEnabled = true
-            gloveWrapper.transform = Transform(matrix: trackedHand.originFromAnchorTransform)
+            anchorEntity.isEnabled = true
+            anchorEntity.transform = Transform(matrix: trackedHand.originFromAnchorTransform)
 
             let joints = skeleton.allJoints
             for (index, joint) in joints.enumerated() {

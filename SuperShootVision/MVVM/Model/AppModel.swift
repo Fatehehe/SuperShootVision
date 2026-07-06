@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import RealityKit
 
 /// Maintains app-wide state
 @MainActor
@@ -30,4 +31,34 @@ class AppModel {
     }
     
     var currentGameState = GameState.startScreen
+    
+    var enemiesDefeated: Int = 0
+    var totalEnemiesToWin: Int = 5
+    
+    var towerHp: Int = 100
+    var towerMaxHp: Int = 100
+    
+    var towerEntity: Entity?
+    
+    func resetGame() {
+        enemiesDefeated = 0
+        currentGameState = .playing
+            
+        towerHp = 100
+        
+        if let entity = towerEntity, var towerComp = entity.components[TowerComponent.self] {
+            towerComp.hp = 100
+            entity.components.set(towerComp)
+        }
+        
+        playGame()
+    }
+    
+    func playGame() {
+        GameStateTracker.isPlaying = true
+    }
+    
+    func stopGame() {
+        GameStateTracker.isPlaying = false
+    }
 }
